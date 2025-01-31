@@ -10,14 +10,14 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'group-study-frontend.vercel.app', //http://localhost:3000
   methods: ['GET', 'POST'],
   credentials: true                
 }));
 
 const io = socketio(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'group-study-frontend.vercel.app', //http://localhost:3000
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
