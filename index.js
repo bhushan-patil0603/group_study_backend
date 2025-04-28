@@ -14,7 +14,7 @@ const server = http.createServer(app);
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://group-study-frontend.vercel.app',//http://localhost:3000
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -23,7 +23,7 @@ app.use(router);
 // ----- SOCKET.IO SERVER -----
 const io = socketio(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://group-study-frontend.vercel.app/',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
